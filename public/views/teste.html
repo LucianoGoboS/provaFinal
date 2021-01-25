@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="../javascript/jquery-lib.js"> </script>
+    <script type="text/javascript" src="../javascript/post-jquery.js"> </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: rgb(253, 236, 0);
+            padding: 25px;
+        }
+
+        body {
+            background-color: #77030c;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        input[type=password],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="icon-bar" src="http://localhost:3000/images/logoloja.jpg" height="50" width="50"></img>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Página principal</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <div class="row content">
+            <div class="col-sm-2 text-center"></div>
+            <div class="col-sm-8 text-center">
+                <h1 style="color:rgb(253, 236, 0)">Acesso aos setores da empresa!!!</h1>
+                <p style="color:rgb(253, 236, 0)">Entre com seu nome de usuário e senha.</p>
+                <hr>
+                <h3 style="color:rgb(253, 236, 0)">Acessar</h3>
+                <div id='comments1'>
+                    <!--              <form> -->
+                    <div class="row">
+                        <div class="col-25">
+                            <label style="color:rgb(253, 236, 0)" for="fnameC">Usuário:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="nomefun" name="fnameC" placeholder="Seu nome de usuário..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label style="color:rgb(253, 236, 0)" for="lCPFC">Senha:</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="password" id="senhafun" name="lCPFC" placeholder="Sua senha..">
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin: 10px 0px">
+                        <input style="margin: 0px 0px;background-color: #eb5122 " type="submit" value="Cancelar" >
+                        <input id="insereUsuario" style="margin: 0px 10px" type="submit" value="Enviar" onclick="Profis.findOne()">
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <h3><a style="color:rgb(253, 236, 0)" class="a1" href="/" title="Voltar..">Voltar..</a>
+                            </h3>
+
+                        </div>
+                    </div>
+                    <!--           </form> -->
+                </div>
+            </div>
+            <div class="col-sm-2 text-center"></div>
+        </div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <p>Só pisos - Pisos e Revestimentos Ltda</p>
+        <p>Rua Barão de Lisboa, 200 - Bairro: Umuarama - Uberaba - MG</p>
+        <p>Fone: (34) 3389-1234 Whatszap: (34)-99090-9087
+
+    </footer>
+
+</body>
+</html>
